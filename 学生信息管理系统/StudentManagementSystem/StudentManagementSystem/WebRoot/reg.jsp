@@ -1,0 +1,140 @@
+<%@ page language="java" import="java.util.*" contentType="text/html; charset=utf-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'reg.jsp' starting page</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+	<script type="text/javascript" src="bs/js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="bs/js/bootstrap.min.js" ></script>
+		<link rel="stylesheet" href="bs/css/bootstrap.min.css" />
+		<style>
+			body{
+				background-color:gainsboro;
+			}
+			.login{
+				height: 500px;
+				width: 700px;
+				margin: 100px auto;
+				background-color: lightyellow;
+			}
+			.login .login-left{
+				width: 260px;
+				height: 500px;
+				text-align: center;
+				background-color: darkorange;
+				float: left;
+			}
+			.login .login-left span {
+				color:antiquewhite;
+				font-size: 66px;
+				margin: 150px 95px 30px 95px;
+				
+			}
+			.login-right{
+				position: relative;
+				top: 150px;
+			}
+			input{
+				margin-bottom: 30px;
+			}
+		</style>
+		<script type="text/javascript">
+		$(function(){
+				$('.zhuce').click(function(){
+					var name=$('.uname').val();
+					if(name==""){
+						alert("用户名不能为空！");
+						$(".uname").focus();
+						return false;
+					};
+					var pwd=$('.username').val();
+					if(pwd==""){
+						alert("密码不能为空！");
+						$(".username").focus();
+						return false;
+					};
+				});
+			});
+		</script>
+  </head>
+  
+  <body>
+	<div class="container">
+			<div class="login">
+				<div class="login-left">
+					<!--<img src="holder.js/260x500"  />-->
+					<span class="glyphicon glyphicon-user"></span>
+					<p style="font-size: 20px;color: antiquewhite;">用户注册</p>
+				</div>
+				<div class="login-right">
+					<form class="form-group form-horizontal" action="doreg.jsp"  method="post">
+						<div class="form-group ">
+							<label class="col-md-2 control-label">用户名:</label>
+							<div class="col-md-4">
+								<input type="text" name="uname"  class="form-control uname" />
+							</div>
+							<label class="col-md-2 control-label">密码:</label>
+							<div class="col-md-4">
+								<input type="password"  class="form-control username"   name="psd"/>
+							</div>
+							<label class="col-md-2 control-label">密码:</label>
+							<div class="col-md-4">
+								<input type="password"  class="form-control" name="repsd"/>
+							</div>
+							<div class="col-md-offset-2 col-md-4" >
+								<input type="submit" value="注册" class="btn btn-info zhuce"  style="margin:0  30px;"/>
+								<input type="reset" value="重写" class="btn  btn-warning reg"/>
+								<a href="index.jsp" class="list-group-item-info" style="margin:100px 86px;">登陆</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
