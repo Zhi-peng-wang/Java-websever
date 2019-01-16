@@ -1,0 +1,18 @@
+1.BigDecimal概述
+	不可变的、任意精度都有符号十进制
+2.作用由于在运算时，float类型和double很容易丢失精度，演示案例。所以，为了能够精确的表示
+	计算浮点数，Java提供了BigDecimal
+3.构造方法
+	public BigDecimal(String val)
+4.BigDecimal常用计算方法
+	 * public BigDecimal add(BigDecimal augend)		加法
+	 * public BigDecimal subtract(BigDecimal subtrahend)		减法
+	 * public BigDecimal multiply(BigDecimal multiplicand)		乘法
+	 * public BigDecimal divide(BigDecimal divisor)				除法
+	 * public BigDecimal divide(BigDecimal divisor,
+	 * 									int scale,
+	 * 									int roundingMode)
+	 * 							商，几位小数，如何取舍
+	 
+	 
+	项目如果像金融有关时，采用BigDeciaml或者BigInteger,来进行计算

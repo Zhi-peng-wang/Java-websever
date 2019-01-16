@@ -1,0 +1,9 @@
+1.BigInteger类的概述
+	可以让超过Integer范围内的数据进行计算。
+	
+2.BigInteger常用的计算方法
+	 * public BigInteger add(BigInteger val)        加法
+	 * public BigInteger subtract(BigInteger val)   减法
+	 * public BigInteger multiply(BigInteger val)   乘法
+	 * public BigInteger divide(BigInteger val)     除法
+	 * public BigInteger[] divideAndRemainder(BigInteger val)   返回商和余数的数组
